@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="ask4_css.css">
+        <meta charset="utf-8">
+        <script src="js/volunteer.js" defer></script>
+        <script>
+            function navigateTo(url) {
+                window.location.href = url;
+            }
+            function logoutVolunteer(){
+                localStorage.clear();
+                window.location.href = "volunteer_login.html";
+            }
+            document.addEventListener("DOMContentLoaded", function () {
+                const shouldRunIncidentCheck = localStorage.getItem("runIncidentCheck");
+                if(shouldRunIncidentCheck === "true"){
+                    localStorage.removeItem("runIncidentCheck");
+                    checkNearByIncidents();
+                }
+                const shouldRunNotifyCheck = localStorage.getItem("runNotifyCheck");
+                if(shouldRunNotifyCheck === "true"){
+                    localStorage.removeItem("runNotifyCheck");
+                    checkVolunteerNotifications();
+                }
+            });
+        </script>
+        <title>Menu</title>
+    </head>
+    <body class="container">
+        <div class="title">Menu</div>  
+            <div class="checklocation">
+                <button id="menu_edit_info" type="button" onclick="navigateTo('volunteer_edit_info.html')">Edit Your Informations</button>
+            </div>
+            <div class="checklocation">
+                <button id="menu_submit_inc" type="button" onclick="navigateTo('volunteer_submitIncident.html')">Sumbit Incident</button>
+            </div>
+            <div class="checklocation">
+                <button id="menu_view_inc" type="button" onclick="navigateTo('volunteer_viewIncident.html')">View Incident</button>
+            </div>
+            <div class="checklocation">
+                <button id="menu_view_participations" type="button" onclick="navigateTo('volunteer_viewParticipations.html')">View Participations</button>
+            </div>
+            <div class="checklocation">
+                <button id="menu_chat_inc" type="button" onclick="navigateTo('volunteer_chatrooms.html')">Chat Rooms</button>
+            </div>
+            <div class="logout">
+                <button id="logoutButton" onclick="logoutVolunteer()">Log-Out</button>
+            </div>
+        <div id="jsonOutput" class="myjson"></div>
+        <footer>
+            <p>For additional information, visit the following resources:</p>
+            <ul>
+                <li><a href="https://forest-fire.emergency.copernicus.eu/" target="_blank">European Forest Fire Information System</a></li>
+                <li><a href="https://earthobservatory.nasa.gov/images/18939/fires-in-greece" target="_blank">NASA Live Fires in Greece</a></li>
+                <li><a href="http://map.disarmfire.eu/Greece" target="_blank">Interreg Live Fires in Greece</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

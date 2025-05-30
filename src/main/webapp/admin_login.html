@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+    <head> 
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="js/admin.js" defer></script>
+        <link rel="stylesheet" type="text/css" href="ask3_css.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            function goBackToLoginMenu() {
+                window.location.href = "login_menu.html";
+            }
+        </script>
+        <title>Login Page</title>
+    </head>
+    <body class="container">
+        <div class="title">Login as Admin</div>
+        <div id="choices">
+            <button style="margin-left: 90%;" type="button" onclick="goBackToLoginMenu()">Go Back to Login Menu</button>
+            <form id="loginForm" name="loginForm" onsubmit='handleLoginAdmin();return false;'>
+                <label class="label_loc" for="username">username:</label><br>
+                <input class="text_loc" type="text"  id="username" name="username" required><br>
+                <label class="label_loc" for="password">password:</label><br>
+                <input class="text_loc" type="password"  name="password" id="password" required><br>
+                <div class="forcheckbox">
+                    <input type="checkbox" id="showPassword">
+                    <label for="showPassword">Show Password</label>
+                </div>
+                <div id="loginError" style="color: red; text-align: center;" ></div>
+                <input type="submit" class="login_but" value="Login">
+            </form>
+        </div>
+    </body>
+    <script>
+        document.getElementById('showPassword').addEventListener('change', function () {
+            const passwordField = document.getElementById('password');
+            if(passwordField.type === "password"){
+                passwordField.type = "text";
+            }else{
+                passwordField.type = "password";
+            }
+        });
+    </script>
+</html>

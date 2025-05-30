@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="ask4_css.css">
+        <meta charset="utf-8">
+        <script>
+            function navigateTo(url) {
+                window.location.href = url;
+            }
+        </script>
+        <title>Login_Menu</title>
+    </head>
+    <body class="container">
+        <div class="title">Menu</div>
+        <div class="checklocation">
+            <button id="menu_submit_inc" type="button" onclick="navigateTo('admin_login.html')">Login as Admin</button>
+        </div>  
+        <div class="checklocation">
+            <button id="menu_edit_info" type="button" onclick="navigateTo('user_login.html')">Login as User</button>
+        </div>
+        <div class="checklocation">
+            <button id="menu_view_inc" type="button" onclick="navigateTo('volunteer_login.html')">Login as volunteer</button>
+        </div>
+        <div class="checklocation">
+            <button id="menu_update_inc" type="button" onclick="navigateTo('guest_menu.html')">Continue as a guest</button>
+        </div>         
+        <div class="logintext" style="text-align: center; margin-bottom: 2%;">
+            Do you want an account? Then <a href="index.html">Sign-up</a> here.
+        </div>
+    </body>
+</html>

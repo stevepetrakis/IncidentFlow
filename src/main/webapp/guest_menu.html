@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="ask4_css.css">
+        <meta charset="utf-8">
+        <script>
+            function navigateTo(url) {
+                window.location.href = url;
+            }
+        </script>
+        <title>Menu</title>
+    </head>
+    <body class="container">
+        <div class="title">Menu</div>
+            <div class="checklocation">
+                <button id="menu_submit_inc" type="button" onclick="navigateTo('guest_submitIncident.html')">Sumbit Incident</button>
+            </div>
+            <div class="checklocation">
+                <button id="menu_view_inc" type="button" onclick="navigateTo('guest_viewIncident.html')">View Incident</button>
+            </div>   
+            <div class="ai">
+                    <button id="aihelpButton" type="button" onclick="navigateTo('guest_aihelp.html')">✨AI✨ Help</button>
+            </div>     
+            <div class="logout">
+                <button id="logoutButton" onclick="navigateTo('login_menu.html')">Back to log-in menu</button>
+            </div>
+        <div id="jsonOutput" class="myjson"></div>
+        <footer>
+            <p>For additional information, visit the following resources:</p>
+            <ul>
+                <li><a href="https://forest-fire.emergency.copernicus.eu/" target="_blank">European Forest Fire Information System</a></li>
+                <li><a href="https://earthobservatory.nasa.gov/images/18939/fires-in-greece" target="_blank">NASA Live Fires in Greece</a></li>
+                <li><a href="http://map.disarmfire.eu/Greece" target="_blank">Interreg Live Fires in Greece</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

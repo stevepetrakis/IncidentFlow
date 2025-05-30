@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="ask4_css.css">
+        <script src="ask4.js" defer></script>
+        <meta charset="utf-8">
+        <script>
+            function goBackToMenu() {
+                window.location.href = "guest_menu.html";
+            }
+        </script>
+        <title>Submit Incident</title>
+    </head>
+    <body class="container">
+        <div class="title">Declare Incident</div>
+        <form id="myForm" novalidate>
+            <div class="space">
+                <div id="successMessage" style="font-size: 30px; margin-bottom: 3%;"></div>
+                <div id="unsuccessMessage" style="font-size: 30px; margin-bottom: 3%;"></div>
+                <label for="incident_type"><b>Incident type</b></label><br>
+                <select id="incident_type" name="incident_type">
+                    <option value="fire">Fire</option>
+                    <option value="accident">Accident</option>
+                </select>
+            </div>
+            <div class="less_space">
+                <label><b>Description</b></label>
+                <input type="text" placeholder="Describe the incident" id="description" name="description" value="" /><br>
+            </div>
+            <div class="less_space">
+                <label><b>Choose your type</b></label><br>
+                <input type="radio" id="guest" name="user_type" value="guest" checked>
+                <label for="guest">Guest</label><br>
+            </div>
+            <div class="less_space">
+                <label><b>Telephone</b></label>
+                <input type="text" placeholder="Enter telephone" id="telephone" name="telephone" value="" pattern="[0-9]{10,14}" 
+                title="The telephone must be 10 to 14 numbers" required /><br>
+                <div id="phoneError" class="elementError"></div>
+            </div>
+            <div class="less_space">
+                <label><b>Give your address</b></label>
+                <input type="text" placeholder="Enter address" id="address" name="address" value="" pattern="[a-zA-Z0-9\s]{3,150}" 
+                title="The address must be between 3 and 150 characters" required /><br>
+                <div id="addressError" class="elementError"></div>
+            </div>
+            <div class="less_space">
+                <label for="prefecture"><b>Choose your prefecture:</b></label><br>
+                <select name="prefecture" id="prefecture">
+                    <option value="Chania">Chania</option>
+                    <option value="Rethumno">Rethumno</option>
+                    <option value="Heraklion">Heraklion</option>
+                    <option value="Agios Nikolas">Agios Nikolas</option>
+                  </select>
+            </div>
+            <div class="less_space">
+                <label><b>Municipality</b></label>
+                <input type="text" placeholder="Enter Municipality" id="Municipality" name="Municipality" value="" pattern="[A-Za-z]{3,30}" 
+                title="Municipality must be between 3 and 30 characters and cannot contain numbers" required /><br>
+                <div id="munError" class="elementError"></div>
+            </div>
+            <div class="checklocation">
+                <button id="checklocation" type="button">Check Location</button>
+            </div>
+            <div id="locationMessage"></div> 
+            <div class="seeMap">
+                <button id="seeonmap" type="button" style="display:none">See on map</button>
+            </div>
+            <div id="Map" style="height:400px; width:400px; margin: 20px auto; display:none; border: 1px solid #ccc;"></div>    
+            <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+            <div class="submit row">
+                <div class="col">
+                    <button type="submit">Submit incident</button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="goBackToMenu()">Go Back to Menu</button>
+                </div>
+            </div>                       
+        </form>
+        <div id="jsonOutput" class="myjson"></div>             
+    </body>
+</html>

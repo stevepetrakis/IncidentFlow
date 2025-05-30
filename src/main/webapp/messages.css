@@ -1,0 +1,74 @@
+.row{
+    padding-top: 20px; 
+    align-items: flex-start;
+}
+.col-md-3 {
+    border-right: 1px solid #ddd;
+}
+
+.col-md-8 h4{
+    position: absolute;
+    left: 40%;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#contactsList {
+    margin-top: 20px;
+}
+
+.contact-item {
+    padding: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.contact-item:hover {
+    background-color: #f8f8f8;
+}
+
+.messages {
+    margin-top: 30px;
+    height: 60vh;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    width: 100%;
+}
+
+input#messageInput {
+    border-radius: 5px;
+}
+
+input#messageInput:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button#sendMessage {
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+}
+
+button#sendMessage:hover {
+    background-color: #0056b3;
+}

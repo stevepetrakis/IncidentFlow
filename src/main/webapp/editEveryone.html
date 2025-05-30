@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="ask4_css.css">
+        <script src="edit.js" defer></script>
+        <meta charset="utf-8">
+        <script>
+            function goBackToMenu(){
+                window.location.href = "admin_menu.html";
+            }
+        </script>
+        <title>Edit all Users</title>
+    </head>
+    <body class="container">
+        <div class="title">Edit all Users</div>
+        <form id="myForm" novalidate>
+            <div id="successMessage" class="message"></div>
+            <div id="unsuccessMessage" class="message"></div>
+            <div class="less_space">
+                <label><b>Choose user type</b></label><br>
+                <input type="radio" id="user" name="user_type" value="user" checked>
+                <label for="user">User</label><br>
+                <input type="radio" id="volunteer" name="user_type" value="volunteer">
+                <label for="volunteer">Volunteer</label><br>
+            </div>
+            <div class="view row">
+                <div class="col">
+                    <button id="findButton">Find user</button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="goBackToMenu()">Go Back to Menu</button>
+                </div>
+            </div> 
+            <div id="ajaxContent"></div>
+        </form>
+    </body>
+</html>

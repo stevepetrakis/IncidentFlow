@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="ask4_css.css">
+        <script src="update.js" defer></script>
+        <meta charset="utf-8">
+        <script>
+            function goBackToMenu(){
+                window.location.href = "admin_menu.html";
+            }
+        </script>
+        <title>Update Incident</title>
+    </head>
+    <body class="container">
+        <div class="title">Update Incident</div>
+        <form id="myForm" novalidate>
+            <div id="successMessage" class="message"></div>
+            <div id="unsuccessMessage" class="message"></div>
+            <div class="less_space">
+                <label><b>Choose status type</b></label><br>
+                <input type="radio" id="submitted" name="status_type" value="submitted" checked>
+                <label for="submitted">Submitted</label><br>
+                <input type="radio" id="fake" name="status_type" value="fake">
+                <label for="fake">Fake</label><br>
+                <input type="radio" id="running" name="status_type" value="running">
+                <label for="running">Running</label><br>
+                <input type="radio" id="finished" name="status_type" value="finished">
+                <label for="finished">Finished</label>
+            </div>
+            <div class="view row">
+                <div class="col">
+                    <button id="findButton">Find incident</button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="goBackToMenu()">Go Back to Menu</button>
+                </div>
+            </div>
+            <div id="ajaxContent"></div>
+            <div id="messageBox"></div>
+        </form>
+    </body>
+</html>

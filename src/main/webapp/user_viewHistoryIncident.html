@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="ask4_css.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <script src="viewHistory.js" defer></script>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <meta charset="utf-8">
+        <script>
+            function goBackToMenu(){
+                window.location.href = "user_menu.html";
+            }
+        </script>
+        <title>View History Incident</title>
+    </head>
+    <body class="container">
+        <div class="title">View History Incident</div>
+        <form id="myForm" novalidate>
+            <div class="space">
+                <div id="successMessage" style="font-size: 30px; margin-bottom: 3%;"></div>
+                <div id="unsuccessMessage" style="font-size: 30px; margin-bottom: 3%;"></div>
+                <label for="incident_type"><b>Choose Incident type</b></label><br>
+                <select id="incident_type" name="incident_type">
+                    <option value="fire">Fire</option>
+                    <option value="accident">Accident</option>
+                    <option value="all">ALL</option>
+                </select>
+            </div>
+            <div class="less_space">
+                <label for="prefecture"><b>Choose your prefecture:</b></label><br>
+                <select name="prefecture" id="prefecture">
+                    <option value="Chania">Chania</option>
+                    <option value="Rethumno">Rethumno</option>
+                    <option value="Heraklion">Heraklion</option>
+                    <option value="Agios Nikolas">Agios Nikolas</option>
+                  </select>
+            </div>
+            <div class="less_space">
+                <label for="start_datetime"><b>Start Date & Time</b></label>
+                <input type="datetime-local" id="start_datetime" name="start_datetime" required><br>
+            </div>
+            <div class="less_space">
+                <label for="end_datetime"><b>End Date & Time</b></label>
+                <input type="datetime-local" id="end_datetime" name="end_datetime" required><br>
+            </div>
+            <div class="less_space">
+                <label for="num_firemen"><b>Number of Firemen</b></label>
+                <input type="number" id="num_firemen" name="num_firemen" min="1" max="500" value="0" placeholder="Enter Number of Firemen" required><br>
+            </div>
+            <div class="less_space">
+                <label for="num_vehicles"><b>Number of Vehicles</b></label>
+                <input type="number" id="num_vehicles" name="num_vehicles" min="1" max="200" value="0" placeholder="Enter Number of Vehicles" required><br>
+            </div>
+            <div class="view row">
+                <div class="col">
+                    <button id="viewButton">View incident</button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="goBackToMenu()">Go Back to Menu</button>
+                </div>
+            </div>                       
+        </form>
+        <div id="jsonOutput" class="myjson"></div> 
+        <div id="map" style="height: 500px; margin-top: 20px; border: 1px solid #ccc; margin-bottom: 10px;"></div>
+    </body>
+</html>

@@ -1,0 +1,222 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    color: #333;
+    background-color: #d9f1ff; /* Default light blue */
+}
+
+th:nth-child(odd) {
+    background-color: #fffae6; /* Light yellow for odd rows */
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    color: #555;
+}
+
+tr:nth-child(even) td {
+    background-color: #f0faff; /* Lighter blue */
+}
+
+tr:nth-child(odd) td {
+    background-color: #fffde0; /* Lighter yellow */
+}
+
+.container{
+    border-bottom: solid grey;
+    border-top: solid grey;
+    border-right: solid grey;
+    border-left: solid grey;
+    margin-bottom: 10px;
+}
+
+.title{
+    text-align: center;
+    font-family: arial black;
+    font-size: 200%;
+    background-color: aqua;
+    padding: 20px;
+    border-bottom: solid yellow;
+    border-width: 10px;
+}
+
+.name{
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+
+.space{
+    text-align: center;
+    margin-top: 3%;
+}
+
+.less_space{
+    text-align: center;
+    margin-top: 1%;
+}
+
+.down_space{
+    margin-bottom: 3%;
+    background-color: aqua;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+            
+.row .col{
+    flex: 1;
+    text-align: center;
+}
+
+.checklocation button{
+    margin-bottom: 1%;
+    background-color: rgb(255, 221, 0);
+    text-align: center;
+    margin-top: 2%;
+    width: 250px;
+    height: 50px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-left: 38%;;
+}
+
+.checklocation button:hover{
+    background-color: rgb(123, 114, 55);
+}
+
+.logintext{
+    font-size: 16px;
+}
+
+.logintext a {
+    color: aqua;
+    text-decoration: none;
+}
+
+.logintext a:hover {
+    text-decoration: underline;
+}
+
+.logout button{
+    margin-bottom: 1%;
+    background-color: aqua;
+    text-align: center;
+    margin-top: 2%;
+    width: 250px;
+    height: 50px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-left: 38%;;
+}
+
+.logout button:hover{
+    background-color: blue;
+}
+
+
+.ai button {
+    margin-bottom: 1%;
+    background-color: #b32fdc;
+    color: white;
+    text-align: center;
+    margin-top: 2%;
+    width: 250px;
+    height: 50px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-left: 38%;
+    box-shadow: 0 0 10px #b32fdc, 0 0 20px #b32fdc, 0 0 30px #b32fdc;
+}
+
+.ai button:hover {
+    background-color: #9B30FF;
+}
+
+
+
+#locationMessage {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.seeMap button{
+    margin-bottom: 3%;
+    margin-top: 1%;
+    background-color: rgb(255, 221, 0);
+    text-align: center;
+    width: 250px;
+    height: 50px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-left: 38%;;
+}
+
+.seeMap button:hover{
+    background-color: rgb(123, 114, 55);
+}
+
+
+.submit button{
+    background-color: aqua;
+    text-align: center;
+    margin-top: 2%;
+    width: 100px;
+    height: 50px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.submit button:hover{
+    background-color: #00ced1;
+}
+
+.elementError{
+    color: red;
+}
+
+.is-invalid {
+    border: 2px solid red;
+}
+
+.myjson{
+    margin-top: 20px; 
+    white-space: pre-wrap; 
+    background-color: #f8f9fa; 
+    padding: 15px; 
+    border: 1px solid #dee2e6; 
+    display: none;
+}
+
+.view button{
+    background-color: aqua;
+    text-align: center;
+    margin-top: 2%;
+    width: 100px;
+    height: 50px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.view button:hover{
+    background-color: #00ced1;
+}
+
+.message{
+    font-size: 20px;
+    margin-bottom: 3%;
+    text-align:center;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="ask4_css.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="admin_charts.js" defer></script>
+        <meta charset="utf-8">
+        <script>
+            function goBackToMenu(){
+                window.location.href = "admin_menu.html";
+            }
+        </script>
+        <title>View Charts</title>
+    </head>
+    <body class="container">
+        <div class="title">View Charts</div>
+        <form id="myForm" novalidate>
+            <div class="less_space">
+                <label><b>Choose charts type</b></label><br>
+                <input type="radio" id="incident_type" name="chart_type" value="incident_type" checked>
+                <label for="incident_type">Incident type</label><br>
+                <input type="radio" id="user_volunteer" name="chart_type" value="user_volunteer">
+                <label for="user_volunteer">Users/Volunteers</label><br>
+                <input type="radio" id="vehicle_firemen" name="chart_type" value="vehicle_firemen">
+                <label for="vehicle_firemen">Vehicles/Firemen</label><br>
+            </div>
+            <div class="view row">
+                <div class="col">
+                    <button id="viewButton">View charts</button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="goBackToMenu()">Go Back to Menu</button>
+                </div>
+            </div>                       
+        </form>
+        <div id="jsonOutput"></div>
+        <canvas id="incidentChart" width="400" height="200"></canvas>
+    </body>
+</html>

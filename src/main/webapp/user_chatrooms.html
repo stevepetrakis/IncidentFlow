@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="ask4_css.css">
+        <link rel="stylesheet" type="text/css" href="messages.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="sendmessages.js" defer></script>
+        <script>
+            function goBackToMenu() {
+                window.location.href = "user_menu.html";
+            }
+        </script>
+        <title>Chat Rooms</title>
+    </head>
+    <body class="container">
+        <div class="title">Chat Rooms</div>
+        <div class="row">
+            <div class="col-md-3">
+                <h4>Contacts</h4>
+                <input type="text" id="searchContacts" placeholder="Search contacts..." oninput="filterContacts()">
+                <div id="contactsList"></div>
+                <h4>Incident's Id</h4>
+                <input type="text" id="searchIncident" placeholder="Search incident..." oninput="filterIncidents()">
+                <div id="incidentsList"></div>
+            </div>
+            <div class="col-md-8">
+                <h4 id="messagetitle">Select a room to start chatting</h4>
+                <div id="chat-area">
+                    <div class="messages" id="messages"></div>
+                    <div class="input-group">
+                        <input type="text" id="messageInput" placeholder="Type a message..." aria-label="Type a message">
+                        <div>
+                            <button type="button" id="sendMessage">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form id="myForm" novalidate>            
+            <div class="submit row">
+                <div class="col">
+                    <button type="button" onclick="goBackToMenu()">Go Back to Menu</button>
+                </div>
+            </div>                       
+        </form>           
+    </body>
+</html>

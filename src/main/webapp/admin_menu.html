@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="ask4_css.css">
+        <meta charset="utf-8">
+        <script src="js/admin.js" defer></script>
+        <script>
+            function navigateTo(url) {
+                window.location.href = url;
+            }
+            function logoutUser(){
+                localStorage.clear();
+                window.location.href = "admin_login.html";
+            }
+            document.addEventListener("DOMContentLoaded", function () {
+                const shouldCheckIncidents = localStorage.getItem("checkSubmittedIncidents");
+
+                if (shouldCheckIncidents === "true") {
+                    localStorage.removeItem("checkSubmittedIncidents");
+                    checkSubmittedIncidents();
+                }
+            });
+        </script>
+        <title>Menu</title>
+    </head>
+    <body class="container">
+        <div class="title">Menu</div>
+            <div class="checklocation">
+                <button id="menu_submit_inc" type="button" onclick="navigateTo('admin_submitIncident.html')">Sumbit Incident</button>
+            </div>
+            <div class="checklocation">
+                <button id="menu_view_inc" type="button" onclick="navigateTo('admin_viewIncident.html')">View Incident</button>
+            </div>
+            <div class="checklocation">
+                <button id="menu_update_inc" type="button" onclick="navigateTo('updateIncident.html')">Update Incident</button>
+            </div>
+            <div class="checklocation">
+                <button id="menu_edit_users" type="button" onclick="navigateTo('editEveryone.html')">Edit all Users</button>
+            </div>
+            <div class="checklocation">
+                <button id="menu_edit_participants" type="button" onclick="navigateTo('editParticipants.html')">Edit Participants</button>
+            </div>
+            <div class="checklocation">
+                <button id="menu_volunteer_request" type="button" onclick="navigateTo('volunteersRequests.html')">Volunteers Requests</button>
+            </div>
+            <div class="checklocation">
+                <button id="menu_chat_inc" type="button" onclick="navigateTo('admin_chatrooms.html')">Chat Rooms</button>
+            </div>
+            <div class="checklocation">
+                <button id="menu_view_charts" type="button" onclick="navigateTo('admin_view_charts.html')">View Charts</button>
+            </div>
+            <div class="logout">
+                <button id="logoutButton" onclick="logoutUser()">Log-Out</button>
+            </div>
+        <div id="jsonOutput" class="myjson"></div>           
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="ask4_css.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <script src="volunteer_viewparticipations.js" defer></script>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <meta charset="utf-8">
+        <script>
+            function goBackToMenu(){
+                window.location.href = "volunteer_menu.html";
+            }
+        </script>
+        <title>View Participations</title>
+    </head>
+    <body class="container">
+        <div class="title">View Participations</div>
+        <form id="myForm" novalidate>            
+            <div id="jsonOutput" class="myjson"></div> 
+            <div class="view row">
+                <div class="col">
+                    <button type="button" onclick="goBackToMenu()">Go Back to Menu</button>
+                </div>
+            </div>                       
+        </form>
+    </body>
+</html>

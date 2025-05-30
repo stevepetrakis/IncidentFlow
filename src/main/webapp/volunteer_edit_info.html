@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="js/volunteer.js" defer></script>
+        <link rel="stylesheet" href="ask3_css.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>User Information</title>
+        <script>
+            function goBackToMenu() {
+                window.location.href = "volunteer_menu.html";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="login" id="output">
+            <h2>Volunteer information</h2>
+            <div id="ajaxContent"></div>
+            <div class="button-row" id="mainButtons">
+                <button id="editButton" onclick="showEditButtons()">Edit</button>
+                <button type="button" onclick="goBackToMenu()">Go Back to Menu</button>
+            </div>
+            <div class="button-row" id="secondButtons" style="display: none;">
+                <button id="exitButton" onclick="showDefaultButtons()">Cancel</button>
+                <button id="saveButton" onclick="saveChanges()">Save</button>
+            </div>
+        </div>
+    </body>
+</html>

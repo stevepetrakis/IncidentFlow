@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+table, tr{
+    border: 2px solid black;
+    
+}
+.row {
+width:100%;
+ 
+}
+
+img {
+width:90%;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  display:inline-block;
+  float: left;
+  padding: 10px;
+ /* 	text-align: center;*/
+  border: 5px solid black;
+  border-radius: 8px;
+  margin-right:2%;
+  margin-left:2%;
+  min-height:400px;
+}
+
+.column1Width {
+width: 30%;
+}
+
+.column3Width {
+width: 99%;
+}
+
+.column2Width {
+width: 60%;
+}
+
+.subColumn {
+float: left;
+  width: 45%;
+  padding: 10px;
+  border: 5px solid black;
+  border-radius: 8px;
+  margin-right:10px;
+  margin-left:10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+}
+
+
+
+h2{
+	text-align: center;
+}
+
+.button1 {
+  background-color: #ffffff; 
+  border: 5px solid black;
+  border-radius: 8px;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 79%;
+}
+
+.button2 {
+  background-color: #ffffff; 
+  border: 5px solid black;
+  border-radius: 8px;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.login_but{
+  background-color: aqua;
+  border: 5px solid black;
+  border-radius: 8px;
+  color: black;
+  margin-top: 15px;
+  margin-left: 45%;
+  margin-bottom: 10px;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.login{
+    background-color:#ADD8E6;
+    padding-bottom: 250px;
+    padding-top: 20px;
+}
+
+.login_title{
+    text-align: center;
+    font-family: arial black;
+}
+
+.label_loc{
+    margin-left: 43%;
+    font-size: 20px;
+}
+
+.text_loc{
+    margin-left: 43%;
+}
+
+#output table{
+    margin: auto;
+    border-collapse: collapse;
+}
+
+#output{
+    text-align: center;  
+}
+
+.button-row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #003f7f;
+}
+
+.container{
+    border-bottom: solid grey;
+    border-top: solid grey;
+    border-right: solid grey;
+    border-left: solid grey;
+    margin-bottom: 10px;
+}
+
+.title{
+    text-align: center;
+    font-family: arial black;
+    font-size: 200%;
+    background-color: aqua;
+    padding: 20px;
+    border-bottom: solid yellow;
+    border-width: 10px;
+}
+
+.forcheckbox{
+    margin-left: 43%;
+    margin-top: 1%;
+}

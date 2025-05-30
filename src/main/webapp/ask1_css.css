@@ -1,0 +1,143 @@
+.container{
+    border-bottom: solid grey;
+    border-top: solid grey;
+    border-right: solid grey;
+    border-left: solid grey;
+    margin-bottom: 10px;
+}
+
+#profile_image{
+    width: 30%;
+    height: 20%;
+    border-radius: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: solid white;
+}
+
+.title{
+    text-align: center;
+    font-family: arial black;
+    font-size: 200%;
+    background-color: aqua;
+    padding: 20px;
+    border-bottom: solid yellow;
+    border-width: 10px;
+}
+
+.name{
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+
+.space{
+    text-align: center;
+    margin-top: 3%;
+}
+
+.less_space{
+    text-align: center;
+    margin-top: 1%;
+}
+
+.down_space{
+    margin-bottom: 3%;
+    background-color: aqua;
+}
+
+.checklocation button{
+    margin-bottom: 1%;
+    background-color: rgb(255, 221, 0);
+    text-align: center;
+    margin-top: 2%;
+    width: 250px;
+    height: 50px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-left: 38%;;
+}
+
+.checklocation button:hover{
+    background-color: rgb(123, 114, 55);
+}
+
+#locationMessage {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.seeMap button{
+    margin-bottom: 3%;
+    margin-top: 1%;
+    background-color: rgb(255, 221, 0);
+    text-align: center;
+    width: 250px;
+    height: 50px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-left: 38%;;
+}
+
+.seeMap button:hover{
+    background-color: rgb(123, 114, 55);
+}
+
+
+.signUp button{
+    margin-bottom: 3%;
+    background-color: aqua;
+    text-align: center;
+    margin-top: 2%;
+    width: 100px;
+    height: 50px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-left: 45%;;
+}
+
+.signUp button:hover{
+    background-color: #00ced1;
+}
+
+.passStrength{
+    color: gray;
+    text-align: center;
+}
+
+.passError{
+    color: red;
+    text-align: center;
+}
+
+.elementError{
+    color: red;
+}
+
+.is-invalid {
+    border: 2px solid red;
+}
+
+.logintext{
+    font-size: 16px;
+}
+
+.logintext a {
+    color: aqua;
+    text-decoration: none;
+}
+
+.logintext a:hover {
+    text-decoration: underline;
+}
+
+.myjson{
+    margin-top: 20px; 
+    white-space: pre-wrap; 
+    background-color: #f8f9fa; 
+    padding: 15px; 
+    border: 1px solid #dee2e6; 
+    display: none;
+}

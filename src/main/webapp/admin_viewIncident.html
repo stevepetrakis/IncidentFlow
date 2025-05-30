@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="ask4_css.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <script src="view.js" defer></script>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <meta charset="utf-8">
+        <script>
+            function goBackToMenu(){
+                window.location.href = "admin_menu.html";
+            }
+        </script>
+        <title>View Incident</title>
+    </head>
+    <body class="container">
+        <div class="title">View Incident</div>
+        <form id="myForm" novalidate>
+            <div class="space">
+                <div id="successMessage" style="font-size: 30px; margin-bottom: 3%;"></div>
+                <div id="unsuccessMessage" style="font-size: 30px; margin-bottom: 3%;"></div>
+                <label for="incident_type"><b>Choose Incident type</b></label><br>
+                <select id="incident_type" name="incident_type">
+                    <option value="fire">Fire</option>
+                    <option value="accident">Accident</option>
+                    <option value="all">ALL</option>
+                </select>
+            </div>
+            <div class="less_space">
+                <label><b>Choose status type</b></label><br>
+                <input type="radio" id="submitted" name="status_type" value="submitted" checked>
+                <label for="submitted">Submitted</label><br>
+                <input type="radio" id="fake" name="status_type" value="fake">
+                <label for="fake">Fake</label><br>
+                <input type="radio" id="running" name="status_type" value="running">
+                <label for="running">Running</label><br>
+                <input type="radio" id="finished" name="status_type" value="finished">
+                <label for="finished">Finished</label>
+            </div>
+            <div class="less_space">
+                <label><b>Municipality</b></label>
+                <input type="text" placeholder="Enter Municipality" id="municipality" name="Municipality" value="" pattern="[A-Za-z]{3,30}" 
+                title="Municipality must be between 3 and 30 characters and cannot contain numbers" required /><br>
+                <div id="munError" class="elementError"></div>
+            </div>
+            <div class="view row">
+                <div class="col">
+                    <button id="viewButton">View incident</button>
+                </div>
+                <div class="col">
+                    <button type="button" onclick="goBackToMenu()">Go Back to Menu</button>
+                </div>
+            </div>                       
+        </form>
+        <div id="jsonOutput" class="myjson"></div> 
+        <div id="map" style="height: 500px; margin-top: 20px; border: 1px solid #ccc; margin-bottom: 10px;"></div>
+    </body>
+</html>
